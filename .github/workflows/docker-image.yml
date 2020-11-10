@@ -14,6 +14,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile -t docker.pkg.github.com/yjgbg/flutter-web-builder/master:${GITHUB_RUN_ID}
     - name: Login Github Package
-        run: cat $PACKAGE_TOKEN |docker login docker.pkg.github.com -u yjgbg -password-stdin
+      run: cat ${{secrets.PACKAGE_TOKEN}} |docker login docker.pkg.github.com -u yjgbg -password-stdin
     - name: Push the Docker image
       run: docker push docker.pkg.github.com/${GITHUB_REPOSITORY}/master:${GITHUB_RUN_ID}
