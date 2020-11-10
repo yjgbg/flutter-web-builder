@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Echo PACKAGE TOKEN
-      run: echo ${PACKAGE_TOKEN}
+      run: echo $PACKAGE_TOKEN
     - name: Build the Docker image
       run: docker build . --file Dockerfile -t docker.pkg.github.com/yjgbg/flutter-web-builder/master:${GITHUB_RUN_ID}
     - name: Login Github Package
