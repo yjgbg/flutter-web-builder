@@ -14,6 +14,6 @@ jobs:
     - name: Build the Docker image
       run: docker build -t docker.pkg.github.com/${GITHUB_REPOSITORY}/master:${GITHUB_RUN_ID} .
     - name: Login Github Package
-      run: cat ${{secrets.PACKAGE_TOKEN}} |docker login docker.pkg.github.com -u yjgbg -password-stdin
+      run: docker login docker.pkg.github.com -u yjgbg -p ${{ secrets.PACKAGE_TOKEN }}
     - name: Push the Docker image
       run: docker push docker.pkg.github.com/${GITHUB_REPOSITORY}/master:${GITHUB_RUN_ID}
