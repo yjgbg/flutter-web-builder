@@ -1,4 +1,5 @@
 FROM alpine/git
+RUN apk update;apk upgrade;apk add bash
 # Prerequisites
 WORKDIR /target/
 RUN git clone https://github.com/flutter/flutter.git -b beta --depth 1
