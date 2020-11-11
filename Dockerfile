@@ -11,7 +11,7 @@ RUN apk add curl
 WORKDIR /root/
 RUN git clone https://github.com/flutter/flutter.git -b beta --depth 1
 # Install flutter beta
-ENV PATH "$PATH:/target/flutter/bin"
+ENV PATH "$PATH:/root/flutter/bin"
 # Enable web capabilities
 RUN flutter config --enable-web
 RUN flutter upgrade
