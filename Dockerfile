@@ -5,7 +5,7 @@ RUN apk add bash
 RUN apk add unzip
 RUN apk add git
 RUN apk add openssh-client
-RUN apk add bash unzip xz-utils git openssh-client curl
+RUN apk add curl
 # Prerequisites
 WORKDIR /target/
 RUN git clone https://github.com/flutter/flutter.git -b beta --depth 1
