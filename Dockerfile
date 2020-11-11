@@ -3,6 +3,7 @@ RUN apk update
 RUN apk upgrade
 RUN apk add bash
 RUN apk add unzip
+RUN apk add world
 RUN apk add xz-utils
 RUN apk add git
 RUN apk add openssh-client
