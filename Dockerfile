@@ -8,7 +8,7 @@ RUN apk add git
 RUN apk add openssh-client
 RUN apk add curl
 # Prerequisites
-WORKDIR /target/
+WORKDIR /root/
 RUN git clone https://github.com/flutter/flutter.git -b beta --depth 1
 # Install flutter beta
 ENV PATH "$PATH:/target/flutter/bin"
