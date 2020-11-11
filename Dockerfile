@@ -1,5 +1,7 @@
 FROM alpine
-RUN apk update;apk upgrade;apk add bash unzip xz-utils git openssh-client curl
+RUN apk update
+RUN apk upgrade
+RUN apk add bash unzip xz-utils git openssh-client curl
 # Prerequisites
 WORKDIR /target/
 RUN git clone https://github.com/flutter/flutter.git -b beta --depth 1
